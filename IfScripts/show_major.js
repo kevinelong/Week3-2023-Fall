@@ -18,7 +18,7 @@ if("BIOL" == input_code){
 }else if("MKT" == input_code){
     result_name = "Marketing"
     result_dept = "Westly Hall #310"    
-}else{
+}else{ //DEFAULT
     result_name = "INVALID CODE"
     result_dept = "INVALID CODE"
 }
