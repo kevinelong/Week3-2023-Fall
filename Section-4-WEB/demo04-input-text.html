@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showGreeting(){
+            const username = document.getElementById("username");
+            const output = document.getElementById("output");
+            const name = username.value;
+            output.innerText = `
+                Hello ${name}!!!
+            `;
+            // output.innerText = `Hello ` + name + `!!!`;
+        }
+        function init(){
+            const greet = document.getElementById("greet");
+            greet.onclick = showGreeting;
+        }
+        window.onload = init;
+    </script>
+</head>
+<body>
+    <input id="username" placeholder="username" value="">
+    <button id="greet">Greet</button>
+    <div id="output">result...</div>
+</body>
+</html>

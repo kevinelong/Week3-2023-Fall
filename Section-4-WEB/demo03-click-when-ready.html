@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    window.onload = ()=>{
+        const drink = document.getElementById("drink");
+        drink.onclick = ()=> output.innerText = "Refreshing!!!"
+    }
+</script>
+</head>
+
+<body>
+    <!-- PRE-FORMATTED (DON'T IGNORE WHITESPACE) -->
+    <pre>
+Static == Stationary AKA Not Moving AKA Constant
+Dynamic == Moving/Changing Variable over time.
+
+HTML+JS == "Dynamic HTML" according to MS 1999?
+    </pre>
+    <button onclick="output.innerText = 'Howdy';">Inline Attribute Greet</button>
+    <br>
+    <button id="cake">Eat Me I'm a Danish</button>
+    <br>
+    <button id="drink">Drink Me!!!</button>
+    <div id="output">results</div>
+</body>
+<script>
+cake.onclick = ()=> output.innerText = "Yummy"
+
+</script>
+</html>
