@@ -13,8 +13,14 @@
                 Hello ${name}!!!
             `;
             // output.innerText = `Hello ` + name + `!!!`;
+
+            // REMEMBER NAME
+            // localStorage.setItem("name", name)
         }
         function init(){
+            // REMEMBERED VALUE
+            // username.value = localStorage.getItem("name")
+
             const greet = document.getElementById("greet");
             greet.onclick = showGreeting;
         }
