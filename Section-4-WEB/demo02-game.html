@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Demo</title>
+    <script>
+        score = 0;
+        playerXPosition = 0;
+        GOAL = 100;
+        STEP = 10;
+    </script>
+</head>
+<body>
+    <button id="walk">Walk</button>
+    <div id="scoreBoard"></div>
+    <div id="player" style="position: absolute; left:0;">@</div>
+    <div id="goal" style="position: absolute; left:100px;">X</div>
+    <script>
+        // all ids become variables unless they conflict with an existing property of window
+        //const messageDiv = document.getElementById("messageDiv");
+        scoreBoard.innerHTML = score;
+
+        walk.onclick = (e)=>{
+            playerXPosition += STEP;
+            player.style.left = playerXPosition + "px"
+            // playerXPosition = playerXPosition + STEP;
+            score = playerXPosition
+            scoreBoard.innerHTML = score;
+            if(playerXPosition >= GOAL){
+                player.style.color = "green"
+                alert("YOU ARE A WINNER!!!")
+                location.reload()
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <title>Demo</title>
+    <script>
+        x = 123;
+    </script>
+</head>
+
+<body>
+    <div id="messageDiv"></div>
+    <script>
+        // all ids become variables unless they conflict with an existing property of window
+        //const messageDiv = document.getElementById("messageDiv");
+        messageDiv.innerHTML = "Hello World!!!" + x;
+    </script>
+</body>
+
+</html>
