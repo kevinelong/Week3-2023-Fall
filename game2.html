@@ -1,0 +1,51 @@
+<body>
+    <table>
+        <tr>
+            <td></td>
+            <td><button onclick="onMove(this)" id="up">^</button></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><button onclick="onMove(this)" id="left">&lt;</button></td>
+            <td></td>
+            <td><button onclick="onMove(this)" id="right">&gt;</button></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button onclick="onMove(this)" id="down">v</button></td>
+            <td></td>
+        </tr>
+    </table>
+    <div id="board">
+        <div id="player" data-left="0" data-top="0">@</div>
+        <div id="treasure"  data-left="5" data-top="5" data-ched="100">$</div>
+    </div>
+</body>
+<script>
+    board.style  = "position:relative;width:8em;height:8em";
+    board.style.backgroundColor = "#666";
+    player.style = "position:absolute;left:0;top:0";
+    treasure.style = "position:absolute;left:5em;top:5em";
+    document.body.style.color = "white";
+    document.body.style.backgroundColor = "#333333";
+
+    function onMove(e){
+        console.log(e.id);
+        if(e.id == "down"){
+            player.dataset.top = Number(player.dataset.top) + 1;
+        }
+        if(e.id == "up"){
+            player.dataset.top = Number(player.dataset.top) - 1;
+        }
+        if(e.id == "left"){
+            player.dataset.left = Number(player.dataset.left) - 1;
+        }
+        if(e.id == "right"){
+            player.dataset.left = Number(player.dataset.left) + 1;
+        }
+        
+
+        player.style.top = player.dataset.top + "em"; 
+        player.style.left = player.dataset.left + "em"; 
+    }
+</script>
