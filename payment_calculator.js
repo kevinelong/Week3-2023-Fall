@@ -1,6 +1,8 @@
 //https://onladder.co.uk/blog/how-to-calculate-mortgage-repayments/
 //https://codepen.io/andarch/pen/qBxpeY
 
+// SEE ALSO FIN LIBS like https://github.com/lmammino/financial
+
 //REUSABLE FUNCTION
 function calculate(term, apr, price){
     apr = apr / 100 //convert to fraction from percent 0.033
